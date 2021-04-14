@@ -513,6 +513,7 @@ export default {
 		const isMobile = detectMobile()
 
 		window.addEventListener('keyup', e => {
+      if (e.isComposing) return
 			if (e.key === 'Enter' && !e.shiftKey && !this.fileDialog) {
         this.message = this.message + '\n'
         setTimeout(() => this.onChangeInput())
