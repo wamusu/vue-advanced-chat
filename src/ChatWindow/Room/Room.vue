@@ -522,6 +522,15 @@ export default {
 			this.updateFooterList(':')
 		})
 
+		window.addEventListener('keyup', e => {
+			if (e.key === 'Enter' && e.shiftKey && !this.fileDialog) {
+        this.sendMessage()
+			}
+
+			this.updateFooterList('@')
+			this.updateFooterList(':')
+		})
+
 		this.$refs['roomTextarea'].addEventListener('click', () => {
 			if (isMobile) this.keepKeyboardOpen = true
 			this.updateFooterList('@')
