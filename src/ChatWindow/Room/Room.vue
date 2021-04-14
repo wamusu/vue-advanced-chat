@@ -512,7 +512,7 @@ export default {
 		this.newMessages = []
 		const isMobile = detectMobile()
 
-		window.addEventListener('keyup', e => {
+		window.addEventListener('keydown', e => {
       if (e.isComposing) return
 			if (e.key === 'Enter' && !e.shiftKey && !this.fileDialog) {
         this.message = this.message + '\n'
