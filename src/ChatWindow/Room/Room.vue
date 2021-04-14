@@ -514,12 +514,8 @@ export default {
 
 		window.addEventListener('keyup', e => {
 			if (e.key === 'Enter' && !e.shiftKey && !this.fileDialog) {
-				if (isMobile) {
-					this.message = this.message + '\n'
-					setTimeout(() => this.onChangeInput())
-				} else {
-					this.sendMessage()
-				}
+        this.message = this.message + '\n'
+        setTimeout(() => this.onChangeInput())
 			}
 
 			this.updateFooterList('@')
