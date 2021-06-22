@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      .
+    working_dir: /app
+    tty: true
+    ports:
+      - '9528:9528'
+      - '443:443' #追加
+    volumes:
+      - .:/app:cached
+
+volumes:
+  bundle:
