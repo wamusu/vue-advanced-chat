@@ -10,7 +10,7 @@ services:
       - '9528:9528'
       - '443:443' #追加
     volumes:
-      - .:/app:cached
+      - ./:/app:cached
 
 volumes:
   bundle:
